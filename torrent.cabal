@@ -18,12 +18,14 @@ library
   exposed-modules:     Lib
                      , Bencode
                      , Torrent.Metainfo
+                     , Torrent.PeerWireProtocol
   build-depends:       base >= 4.7 && < 5
                      , attoparsec
                      , bytestring
                      , lens
                      , containers
                      , split
+                     , binary
   default-language:    Haskell2010
 
 executable torrent-exe
@@ -40,6 +42,8 @@ test-suite torrent-test
   hs-source-dirs:      test
   main-is:             Spec.hs
   build-depends:       base
+                     , binary
+                     , bytestring
                      , containers
                      , torrent
                      , hspec

@@ -5,6 +5,7 @@ module Lib where
 
   import Bencode
   import Torrent.Metainfo
+  import Torrent.PeerWireProtocol
 
 
   parseBencode :: ByteString -> Maybe Bencode
